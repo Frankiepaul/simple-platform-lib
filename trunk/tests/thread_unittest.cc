@@ -10,7 +10,7 @@ typedef testing::Test ThreadTest;
 
 // Trivial test that thread runs and doesn't crash on create and join ----------
 
-class TrivialThreadDelegate : public platform::thread::Delegate {
+class TrivialThreadDelegate : public platform::Thread::Delegate {
  public:
   TrivialThreadDelegate() : did_run_(false) {}
 
@@ -31,8 +31,8 @@ TEST_F(ThreadTest, TrivialThread) {
   platform::ThreadHandle thread = platform::kNullThreadHandle;
 
   ASSERT_FALSE(delegate.did_run());
-  ASSERT_TRUE(platform::thread::Create(0, &delegate, &thread));
-  platform::thread::Join(thread);
+  ASSERT_TRUE(platform::Thread::Create(0, &delegate, &thread));
+  platform::Thread::Join(thread);
   ASSERT_TRUE(delegate.did_run());
 }
 
@@ -43,9 +43,9 @@ class FunctionTestThreadDelegate : public TrivialThreadDelegate {
   FunctionTestThreadDelegate() {}
 
   virtual void ThreadMain() {
-    platform::thread::CurrentId();
-    platform::thread::Yield();
-    platform::thread::Sleep(100);
+    platform::Thread::CurrentId();
+    platform::Thread::Yield();
+    platform::Thread::Sleep(100);
 
     TrivialThreadDelegate::ThreadMain();
   }
@@ -59,7 +59,7 @@ TEST_F(ThreadTest, FunctionTestThread) {
   platform::ThreadHandle thread = platform::kNullThreadHandle;
 
   ASSERT_FALSE(delegate.did_run());
-  ASSERT_TRUE(platform::thread::Create(0, &delegate, &thread));
-  platform::thread::Join(thread);
+  ASSERT_TRUE(platform::Thread::Create(0, &delegate, &thread));
+  platform::Thread::Join(thread);
   ASSERT_TRUE(delegate.did_run());
 }
