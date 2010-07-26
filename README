@@ -1,0 +1,4 @@
+ 1. The name of the "root" checkout directory *must* be simple-platform-lib.
+ 2. The .gyp currently expects a symlink from simple-platform-lib/chromium to a
+    Chromium checkout. TODO(viettrungluu): This is just a temporary hack.
+ 3. TODO(viettrungluu): The gtest setup is an even bigger temporary hack.
