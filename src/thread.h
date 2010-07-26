@@ -5,7 +5,7 @@
 // Taken from Chromium: src/base/platform_thread.h
 // Significant changes (other than naming):
 //  - namespace |base| -> |platform|
-//  - class |Thread| (with only static methods) -> namespace |thread|
+//  - class |Thread| (with only static methods) -> namespace |Thread|
 //  - |YieldCurrentThread()| -> |Yield()|
 //  - |SetName()| removed
 //  - (Mac) |InitThreading()| removed, so if Cocoa is going to be used, it must
@@ -51,7 +51,7 @@ typedef pid_t ThreadId;
 #endif
 
 namespace platform {
-namespace thread {
+namespace Thread {
 
 // Gets the current thread id, which may be useful for logging purposes.
 ThreadId CurrentId();
@@ -89,7 +89,7 @@ bool CreateNonJoinable(size_t stack_size, Delegate* delegate);
 // |thread_handle|.
 void Join(ThreadHandle thread_handle);
 
-}  // namespace thread
+}  // namespace Thread
 }  // namespace platform
 
 #endif  // SIMPLEPLATFORMLIB_SRC_PLATFORM_THREAD_H_

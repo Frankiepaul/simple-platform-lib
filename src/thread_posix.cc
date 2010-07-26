@@ -25,7 +25,7 @@
 #endif
 
 namespace platform {
-namespace thread {
+namespace Thread {
 
 static void* ThreadFunc(void* closure) {
   Delegate* delegate = static_cast<Delegate*>(closure);
@@ -134,5 +134,5 @@ void Join(ThreadHandle thread_handle) {
   pthread_join(thread_handle, NULL);
 }
 
-}  // namespace thread
+}  // namespace Thread
 }  // namespace platform
