@@ -31,6 +31,10 @@
       ],
       'sources': [
         'src/basictypes.h',
+        'src/lock.cc',
+        'src/lock.h',
+        'src/lock_impl.h',
+        'src/lock_impl_posix.cc',
         'src/port.h',
         'src/thread.h',
         'src/thread_posix.cc',
@@ -67,6 +71,7 @@
         'tests/unittest_main.cc',
 
         # Tests.
+        'tests/lock_unittest.cc',
         'tests/thread_unittest.cc',
       ],
       'dependencies': [
