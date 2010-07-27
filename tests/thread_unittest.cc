@@ -26,7 +26,7 @@ class TrivialThreadDelegate : public platform::Thread::Delegate {
   DISALLOW_COPY_AND_ASSIGN(TrivialThreadDelegate);
 };
 
-TEST_F(ThreadTest, TrivialThread) {
+TEST_F(ThreadTest, Trivial) {
   TrivialThreadDelegate delegate;
   platform::ThreadHandle thread = platform::kNullThreadHandle;
 
@@ -54,7 +54,7 @@ class FunctionTestThreadDelegate : public TrivialThreadDelegate {
   DISALLOW_COPY_AND_ASSIGN(FunctionTestThreadDelegate);
 };
 
-TEST_F(ThreadTest, FunctionTestThread) {
+TEST_F(ThreadTest, Function) {
   FunctionTestThreadDelegate delegate;
   platform::ThreadHandle thread = platform::kNullThreadHandle;
 
