@@ -6,6 +6,7 @@
 
 #ifndef SIMPLEPLATFORMLIB_SRC_LOCK_H_
 #define SIMPLEPLATFORMLIB_SRC_LOCK_H_
+#pragma once
 
 #include "simple-platform-lib/src/lock_impl.h"
 

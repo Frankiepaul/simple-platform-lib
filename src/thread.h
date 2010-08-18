@@ -17,6 +17,7 @@
 
 #ifndef SIMPLEPLATFORMLIB_SRC_PLATFORM_THREAD_H_
 #define SIMPLEPLATFORMLIB_SRC_PLATFORM_THREAD_H_
+#pragma once
 
 #include "simple-platform-lib/src/basictypes.h"
 
