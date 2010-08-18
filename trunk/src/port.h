@@ -6,6 +6,7 @@
 
 #ifndef SIMPLEPLATFORMLIB_SRC_PORT_H_
 #define SIMPLEPLATFORMLIB_SRC_PORT_H_
+#pragma once
 
 #include <stdarg.h>
 #include "simple-platform-lib/build/build_config.h"
