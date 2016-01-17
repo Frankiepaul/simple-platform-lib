@@ -1,0 +1,1 @@
+A C++ library which provides easy-to-use, platform-independent threading, synchronization, etc. primitives, with implementations for Linux, Mac OS X, and Windows.
